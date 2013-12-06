@@ -221,7 +221,7 @@ class NodeElement extends TraversableElement
         }
 
         $this->getSession()->getDriver()->selectOption(
-            $this->getXpath(), $opt->getValue(), $multiple
+            $this->getXpath(), str_replace("\\", "\\\\", $opt->getValue()), $multiple
         );
     }
 
